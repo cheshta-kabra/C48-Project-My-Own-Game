@@ -46,6 +46,7 @@ class Form3{
             math_logo.hide();
             ch1s.hide();
             ch2s.hide();
+            ch3s.hide();
             science_logo.hide();
             introImg.hide();
             listen.hide();
@@ -153,7 +154,7 @@ class Form3{
                     continueBtn.hide();
                     donut.visible = false;
                     solText.hide();
-                    solText.position(windowWidth-780,440);
+                    solText.position(windowWidth-800,440);
                     solution.hide();
 
                     //Stopping the donutVoice and recreating it with a different sound
@@ -171,7 +172,7 @@ class Form3{
                     //Displaying the solution image
                     solution.remove();
                     solution = createElement('h2',"Polygon is a simple closed figure formed by line segments");
-                    solution.position(windowWidth-780,480);
+                    solution.position(windowWidth-800,480);
                     solution.hide();
 
                     //Recreating the destroyed player
@@ -236,7 +237,7 @@ class Form3{
                         continueBtn.hide();
                         donut.visible = false;
                         solText.hide();
-                        solText.position(windowWidth-780,440);
+                        solText.position(windowWidth-800,440);
                         solution.hide();
 
                         //Stopping the donutVoice and recreating it with a different sound
@@ -253,7 +254,7 @@ class Form3{
                         //Displaying the solution image
                         solution.remove();
                         solution = createElement('h2',"An edge is where two faces meet");
-                        solution.position(windowWidth-780,480);
+                        solution.position(windowWidth-800,480);
                         solution.hide();
 
                         //Recreating the destroyed player
@@ -306,7 +307,7 @@ class Form3{
                             //Hiding some elements
                             continueBtn.hide();
                             donut.visible = false;
-                            solText.position(windowWidth-820,440);
+                            solText.position(windowWidth-850,440);
                             solText.hide();
                             solution.hide();
 
@@ -330,7 +331,7 @@ class Form3{
                             //Displaying the solution image
                             solution.remove();
                             solution = createElement('h2',"A triangular prism has 5 faces");
-                            solution.position(windowWidth-820,480);
+                            solution.position(windowWidth-850,480);
                             solution.hide();
 
                             //Recreating the destroyed player
@@ -394,7 +395,7 @@ class Form3{
                                 //Hiding some elements
                                 continueBtn.hide();
                                 donut.visible = false;
-                                solText.position(windowWidth-780,440);
+                                solText.position(windowWidth-800,440);
                                 solText.hide();
                                 solution.hide();
 
@@ -417,7 +418,7 @@ class Form3{
                                 //Displaying the solution image
                                 solution.remove();
                                 solution = createElement('h2',"The corners on a 3D shape are called vertices");
-                                solution.position(windowWidth-780,480);
+                                solution.position(windowWidth-800,480);
                                 solution.hide();
 
                                 //Recreating the destroyed player
@@ -472,7 +473,7 @@ class Form3{
                                     //Hiding some elements
                                     continueBtn.hide();
                                     donut.visible = false;
-                                    solText.position(windowWidth-780,430);
+                                    solText.position(windowWidth-800,430);
                                     solText.hide();
                                     solution.remove();
 
@@ -489,7 +490,7 @@ class Form3{
                                     //Recreating sol
                                     //sol.remove();
                                     sol = createImg('assets3/10sol.png');
-                                    sol.position(windowWidth-810,420);
+                                    sol.position(windowWidth-830,420);
                                     sol.hide();
 
                                     //Displaying the solution image
@@ -654,9 +655,11 @@ class Form3{
                                             //Showing the elements of home page
                                             ch1m.show();
                                             ch2m.show();
+                                            ch3m.show();
                                             math_logo.show();
                                             ch1s.show();
                                             ch2s.show();
+                                            ch3s.show();
                                             science_logo.show();
 
                                         })     

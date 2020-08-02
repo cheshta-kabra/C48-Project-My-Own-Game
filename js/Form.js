@@ -50,6 +50,7 @@ class Form{
             math_logo.hide();
             ch1s.hide();
             ch2s.hide();
+            ch3s.hide();
             science_logo.hide();
             introImg.hide();
             listen.hide();
@@ -628,9 +629,11 @@ class Form{
                                             //Showing the elements of home page
                                             ch1m.show();
                                             ch2m.show();
+                                            ch3m.show();
                                             math_logo.show();
                                             ch1s.show();
                                             ch2s.show();
+                                            ch3s.show();
                                             science_logo.show();
 
                                         })     

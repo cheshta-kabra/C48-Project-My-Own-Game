@@ -46,6 +46,7 @@ class Form5{
             math_logo.hide();
             ch1s.hide();
             ch2s.hide();
+            ch3s.hide();
             science_logo.hide();
             introImg.hide();
             listen.hide();
@@ -94,7 +95,7 @@ class Form5{
            
             /*The recreation of donutVoice is done here as there are many voices assigned to the same property
             (You could also experiment without this line if you want to check)*/
-            donutVoice = createAudio("assets3/hexagon.mp3");
+            donutVoice = createAudio("assets5/line.mp3");
        
             //There is a recreation of player as he gets destroyed in many parts of the code
             player = createSprite(80,120,440,80);
@@ -155,13 +156,13 @@ class Form5{
                     continueBtn.hide();
                     donut.visible = false;
                     solText.hide();
-                    solText.position(windowWidth-780,440);
+                    solText.position(windowWidth-800,440);
                     solution.hide();
 
                     //Stopping the donutVoice and recreating it with a different sound
                     donutVoice.stop();
                     donutVoice.remove();
-                    donutVoice = createAudio("assets3/polygon.mp3");
+                    donutVoice = createAudio("assets5/360.mp3");
 
                     //Recreating sol
                     /*sol.remove();
@@ -172,8 +173,8 @@ class Form5{
 
                     //Displaying the solution image
                     solution.remove();
-                    solution = createElement('h2',"Polygon is a simple closed figure formed by line segments");
-                    solution.position(windowWidth-780,480);
+                    solution = createElement('h2',"1 degree is 1/360th part of a 360° circle");
+                    solution.position(windowWidth-800,480);
                     solution.hide();
 
                     //Recreating the destroyed player
@@ -184,13 +185,13 @@ class Form5{
 
                     //Recreating quesImgMath2
                     this.quesImgMath3.remove();
-                    this.quesImgMath3 = createImg("assets3/polygon.png");
-                    this.quesImgMath3.position(windowWidth-680,80); 
-                    this.quesImgMath3.size(130,130);
+                    this.quesImgMath3 = createImg("assets5/circle1.png");
+                    this.quesImgMath3.position(windowWidth-700,70); 
+                    this.quesImgMath3.size(170,150);
 
                     //Recreating question3
                     this.question5.remove();
-                    this.question5 = createElement('h2',"2)The above figure can be called as a _");
+                    this.question5 = createElement('h2',"2)One degree is _______ of a circle");
                     this.question5.position(windowWidth-800,200);
 
                     //Recreating all option's text
@@ -199,16 +200,16 @@ class Form5{
                     op3text.remove();
                     op4text.remove();
                     
-                    op1text = createElement('h3',"Line");
-                    op1text.position(windowWidth-140,75);
+                    op1text = createElement('h3',"1/4");
+                    op1text.position(windowWidth-140,377);
 
-                    op2text = createElement('h3',"Ray");
+                    op2text = createElement('h3',"1/180");
                     op2text.position(windowWidth-140,225);
 
-                    op3text = createElement('h3',"Polygon");
-                    op3text.position(windowWidth-140,377);
+                    op3text = createElement('h3',"1/360");
+                    op3text.position(windowWidth-140,75);
 
-                    op4text = createElement('h3',"None");
+                    op4text = createElement('h3',"1/120");
                     op4text.position(windowWidth-140,527);
 
                     //Resetting the option sprites and positioning them
@@ -217,9 +218,9 @@ class Form5{
                     reset(op3);
                     reset(op4);
 
-                    op1.y = 100;
+                    op1.y = 400;
                     op2.y = 250;
-                    op3.y = 400;
+                    op3.y = 100;
                     op4.y = 550;
 
                     //The solution image covers the continue button
@@ -238,13 +239,13 @@ class Form5{
                         continueBtn.hide();
                         donut.visible = false;
                         solText.hide();
-                        solText.position(windowWidth-780,440);
+                        solText.position(windowWidth-800,440);
                         solution.hide();
 
                         //Stopping the donutVoice and recreating it with a different sound
                         donutVoice.stop();
                         donutVoice.remove();
-                        donutVoice = createAudio("assets3/edges.mp3");
+                        donutVoice = createAudio("assets5/45°.mp3");
 
                         //Recreating sol
                         /*sol.remove();
@@ -254,8 +255,8 @@ class Form5{
 
                         //Displaying the solution image
                         solution.remove();
-                        solution = createElement('h2',"An edge is where two faces meet");
-                        solution.position(windowWidth-780,480);
+                        solution = createElement('h2',"A full circle is 360°. 360/8 = 45. So a° = 45°");
+                        solution.position(windowWidth-800,480);
                         solution.hide();
 
                         //Recreating the destroyed player
@@ -265,13 +266,13 @@ class Form5{
                 
                         //Recreating quesImgMath2
                         this.quesImgMath3.remove();
-                        this.quesImgMath3 = createImg("assets3/cube.png");
-                        this.quesImgMath3.position(windowWidth-693,80);
-                        this.quesImgMath3.size(200,140);
+                        this.quesImgMath3 = createImg("assets5/45circle.png");
+                        this.quesImgMath3.position(windowWidth-680,68);
+                        this.quesImgMath3.size(180,160);
                         
                         //Recreating question3
                         this.question5.remove();
-                        this.question5 = createElement('h2',"3)The lines on a 3D shape are called");
+                        this.question5 = createElement('h2',"3)How many degrees is each of the angles?");
                         this.question5.position(windowWidth-800,200);
 
                         //Recreating all option's text
@@ -280,16 +281,16 @@ class Form5{
                         op3text.remove();
                         op4text.remove();
 
-                        op1text = createElement('h3',"Lines");
+                        op1text = createElement('h3',"15°");
                         op1text.position(windowWidth-140,377);
 
-                        op2text = createElement('h3',"Vertices");
+                        op2text = createElement('h3',"30°");
                         op2text.position(windowWidth-140,75);
 
-                        op3text = createElement('h3',"Edges");
+                        op3text = createElement('h3',"45°");
                         op3text.position(windowWidth-140,225);
 
-                        op4text = createElement('h3',"Faces");
+                        op4text = createElement('h3',"60°");
                         op4text.position(windowWidth-140,527);
 
                         //Resetting the option sprites and positioning them
@@ -308,14 +309,14 @@ class Form5{
                             //Hiding some elements
                             continueBtn.hide();
                             donut.visible = false;
-                            solText.position(windowWidth-820,440);
+                            solText.position(windowWidth-850,440);
                             solText.hide();
                             solution.hide();
 
                             //Stopping the donutVoice and recreating it with a different sound
                             donutVoice.stop();
                             donutVoice.remove();
-                            donutVoice = createAudio("assets3/prism1.mp3");
+                            donutVoice = createAudio("assets5/acute.mp3");
 
                             //Recreating the level element
                             this.level5.remove();
@@ -331,8 +332,8 @@ class Form5{
 
                             //Displaying the solution image
                             solution.remove();
-                            solution = createElement('h2',"A triangular prism has 5 faces");
-                            solution.position(windowWidth-820,480);
+                            solution = createElement('h2',"An acute angle is > 0° and < 90°");
+                            solution.position(windowWidth-850,480);
                             solution.hide();
 
                             //Recreating the destroyed player
@@ -342,13 +343,13 @@ class Form5{
                             
                             //Recreating quesImgMath2
                             this.quesImgMath3.remove();
-                            this.quesImgMath3 = createImg("assets3/prism.png");
-                            this.quesImgMath3.position(windowWidth-667,115);
-                            this.quesImgMath3.size(140,100);
-                            
+                            this.quesImgMath3 = createImg("assets5/angle.png");
+                            this.quesImgMath3.position(windowWidth-680,40);
+                            this.quesImgMath3.size(200,200);
+                    
                             //Recreating question3
                             this.question5.remove();
-                            this.question5 = createElement('h2',"4)How many faces does a triangular prism have?");
+                            this.question5 = createElement('h2',"4)Angle ABC is 89 degrees. What type of angle is it?");
                             this.question5.position(windowWidth-850,210);
 
                           
@@ -358,17 +359,17 @@ class Form5{
                             op3text.remove();
                             op4text.remove();
 
-                            op1text = createElement('h3',"6 faces");
+                            op1text = createElement('h3',"Right angle");
                             op1text.position(windowWidth-140,377);
 
-                            op2text = createElement('h3',"4 faces");
+                            op2text = createElement('h3',"Obtuse angle");
                             op2text.position(windowWidth-140,75);
 
-                            op3text = createElement('h3',"5 faces");
-                            op3text.position(windowWidth-140,225);
+                            op3text = createElement('h3',"Acute angle");
+                            op3text.position(windowWidth-140,527);
 
-                            op4text = createElement('h3',"3 faces");
-                            op4text.position(windowWidth-140,527);
+                            op4text = createElement('h3',"Zero angle");
+                            op4text.position(windowWidth-140,225);
 
                             //Resetting the option sprites and positioning them
                             reset(op1);
@@ -378,8 +379,8 @@ class Form5{
 
                             op1.y = 400;
                             op2.y = 100;
-                            op3.y = 250;
-                            op4.y = 550;
+                            op3.y = 550;
+                            op4.y = 250;
 
                             //The solution image covers the continue button
                             /*Without the recreation, the continue button takes a lot of time to respond. 
@@ -396,14 +397,14 @@ class Form5{
                                 //Hiding some elements
                                 continueBtn.hide();
                                 donut.visible = false;
-                                solText.position(windowWidth-780,440);
+                                solText.position(windowWidth-800,440);
                                 solText.hide();
                                 solution.hide();
 
                                 //Stopping the donutVoice and recreating it with a different sound
                                 donutVoice.stop();
                                 donutVoice.remove();
-                                donutVoice = createAudio("assets3/vertices.mp3");
+                                donutVoice = createAudio("assets5/radius.mp3");
 
                                 //Recreating the level element
                                 /*this.level5.remove();
@@ -418,8 +419,8 @@ class Form5{
                                 
                                 //Displaying the solution image
                                 solution.remove();
-                                solution = createElement('h2',"The corners on a 3D shape are called vertices");
-                                solution.position(windowWidth-780,480);
+                                solution = createElement('h2',"The circumference of a circle = π*diameter = 3.14*3 = 9.42 inches");
+                                solution.position(windowWidth-800,480);
                                 solution.hide();
 
                                 //Recreating the destroyed player
@@ -429,13 +430,13 @@ class Form5{
                                
                                 //Recreating quesImgMath2
                                 this.quesImgMath3.remove();
-                                this.quesImgMath3 = createImg("assets3/corner.png");
-                                this.quesImgMath3.position(windowWidth-678,83);
-                                this.quesImgMath3.size(200,140);
+                                this.quesImgMath3 = createImg("assets5/3inch.png");
+                                this.quesImgMath3.position(windowWidth-678,60);
+                                this.quesImgMath3.size(180,150);
                                 
                                 //Recreating question3
                                 this.question5.remove();
-                                this.question5 = createElement('h2',"5)The corners on a 3D shape are called");
+                                this.question5 = createElement('h2',"5)What is the circumference of this circle?");
                                 this.question5.position(windowWidth-800,200);
     
                                
@@ -446,16 +447,16 @@ class Form5{
                                 op3text.remove();
                                 op4text.remove();
     
-                                op1text = createElement('h3',"outlines");
+                                op1text = createElement('h3',"3.14 inches");
                                 op1text.position(windowWidth-140,75);
     
-                                op2text = createElement('h3',"dots");
+                                op2text = createElement('h3',"6.14 inches");
                                 op2text.position(windowWidth-140,225);
 
-                                op3text = createElement('h3',"vertices");
+                                op3text = createElement('h3',"9.42 inches");
                                 op3text.position(windowWidth-140,377);
     
-                                op4text = createElement('h3',"points");
+                                op4text = createElement('h3',"9 inches");
                                 op4text.position(windowWidth-140,527);
 
                                 //Resetting the option sprites and positioning them
@@ -474,14 +475,14 @@ class Form5{
                                     //Hiding some elements
                                     continueBtn.hide();
                                     donut.visible = false;
-                                    solText.position(windowWidth-780,430);
+                                    solText.position(windowWidth-800,430);
                                     solText.hide();
                                     solution.remove();
 
                                     //Stopping the donutVoice and recreating it with a different sound 
                                     donutVoice.stop();
                                     donutVoice.remove();
-                                    donutVoice = createAudio("assets3/10cubes.mp3");
+                                    donutVoice = createAudio("assets5/1unit.mp3");
 
                                     //Recreating the level element
                                     this.level5.remove();
@@ -490,9 +491,9 @@ class Form5{
 
                                     //Recreating sol
                                     //sol.remove();
-                                    sol = createImg('assets3/10sol.png');
-                                    sol.position(windowWidth-810,420);
-                                    sol.hide();
+                                    solution = createElement('h2','Circumference = π*diameter = π. ∴ diameter=1 unit');
+                                    solution.position(windowWidth-800,470);
+                                    solution.hide();
 
                                     //Displaying the solution image
                                     /*solution.remove();
@@ -507,13 +508,13 @@ class Form5{
 
                                     //Recreating quesImgMath2
                                     this.quesImgMath3.remove();
-                                    this.quesImgMath3 = createImg("assets3/10cubes.png");
-                                    this.quesImgMath3.position(windowWidth-637,75);
+                                    this.quesImgMath3 = createImg("assets5/πcircum.png");
+                                    this.quesImgMath3.position(windowWidth-620,60);
                                     this.quesImgMath3.size(170,150);
 
                                     //Recreating question3
                                     this.question5.remove();
-                                    this.question5 = createElement('h2',"6)How many cubes are there in the given figure");
+                                    this.question5 = createElement('h2',"6)If a circle's circumference = π, what is its diameter?");
                                     this.question5.position(windowWidth-800,200);
                                     
                                   
@@ -524,16 +525,16 @@ class Form5{
                                     op3text.remove();
                                     op4text.remove();
 
-                                    op1text = createElement('h3',"6 cubes");
-                                    op1text.position(windowWidth-140,75);
+                                    op1text = createElement('h3',"3.14 units");
+                                    op1text.position(windowWidth-140,527);
 
-                                    op2text = createElement('h3',"8 cubes");
+                                    op2text = createElement('h3',"10 units");
                                     op2text.position(windowWidth-140,377);
         
-                                    op3text = createElement('h3',"10 cubes");
-                                    op3text.position(windowWidth-140,527);
+                                    op3text = createElement('h3',"1 unit");
+                                    op3text.position(windowWidth-140,75);
         
-                                    op4text = createElement('h3',"9 cubes");
+                                    op4text = createElement('h3',"31 units");
                                     op4text.position(windowWidth-140,225);
 
                                     //Resetting the option sprites and positioning them
@@ -542,9 +543,9 @@ class Form5{
                                     reset(op3);
                                     reset(op4);
 
-                                    op1.y = 100;
+                                    op1.y = 550;
                                     op2.y = 400;
-                                    op3.y = 550;
+                                    op3.y = 100;
                                     op4.y = 250;
             
                                     //mousePressed activity of the continue button
@@ -552,14 +553,14 @@ class Form5{
                                         //Hiding some elements
                                         continueBtn.remove();
                                         donut.visible = false;
-                                        solText.position(windowWidth-780,430);
+                                        solText.position(windowWidth-800,430);
                                         solText.hide();
                                         solution.remove();
 
                                         //Stopping the donutVoice and recreating it with a different sound 
                                         donutVoice.stop();
                                         donutVoice.remove();
-                                        donutVoice = createAudio("assets3/net.mp3");
+                                        donutVoice = createAudio("assets5/4pi.mp3");
 
                                         //Recreating the level element
                                         /*this.level5.remove();
@@ -567,11 +568,11 @@ class Form5{
                                         this.level5.position(20,0);*/
                                        
                                         //Recreating sol
-                                        sol.remove();
-                                        sol = createImg('assets3/cubenet.gif');
-                                        sol.size(200,200);
-                                        sol.position(windowWidth-750,430);
-                                        sol.hide();
+                                        solution.remove();
+                                        solution = createElement('h2','Area = πr² = π(2)² = 4π cm²');
+                                        solution.size(200,200);
+                                        solution.position(windowWidth-800,470);
+                                        solution.hide();
             
                                         //Recreating the destroyed player
                                         player = createSprite(80,120,440,80);
@@ -580,13 +581,13 @@ class Form5{
 
                                         //Recreating quesImgMath2
                                         this.quesImgMath3.remove();
-                                        this.quesImgMath3 = createImg("assets3/cubenet.png");
-                                        this.quesImgMath3.position(windowWidth-680,30);
-                                        this.quesImgMath3.size(200,200);
+                                        this.quesImgMath3 = createImg("assets5/area.png");
+                                        this.quesImgMath3.position(windowWidth-660,30);
+                                        this.quesImgMath3.size(220,200);
                                         
                                         //Recreating question3
                                         this.question5.remove();
-                                        this.question5 = createElement('h2',"7)Can this net be folded into a cube?");
+                                        this.question5 = createElement('h2',"7)What is the area of a circle whose radius is 2cm?");
                                         this.question5.position(windowWidth-800,200);
             
                                         //Recreating all option's text
@@ -595,16 +596,16 @@ class Form5{
                                         op3text.remove();
                                         op4text.remove();
 
-                                        op1text = createElement('h3',"Can't say");
+                                        op1text = createElement('h3',"2π cm²");
                                         op1text.position(windowWidth-140,377);
 
-                                        op2text = createElement('h3',"No");
-                                        op2text.position(windowWidth-140,225);
+                                        op2text = createElement('h3',"3π cm²");
+                                        op2text.position(windowWidth-140,75);
             
-                                        op3text = createElement('h3',"Yes");
-                                        op3text.position(windowWidth-140,75);
+                                        op3text = createElement('h3',"4π cm²");
+                                        op3text.position(windowWidth-140,225);
 
-                                        op4text = createElement('h3',"All");
+                                        op4text = createElement('h3',"5π cm²");
                                         op4text.position(windowWidth-140,527);
 
                                         //Resetting the option sprites and positioning them
@@ -614,8 +615,8 @@ class Form5{
                                         reset(op4);
                                         
                                         op1.y = 400;
-                                        op2.y = 250;
-                                        op3.y = 100;
+                                        op2.y = 100;
+                                        op3.y = 250;
                                         op4.y = 550;
             
                                         //Recreating destroyed back button
@@ -633,7 +634,7 @@ class Form5{
                                             button_back.hide();
                                             this.level5.hide();
                                             this.quesImgMath3.hide();
-                                            sol.hide();
+                                            solution.hide();
                                             solText.hide();
                                             donut.visible = false;
 
@@ -656,9 +657,11 @@ class Form5{
                                             //Showing the elements of home page
                                             ch1m.show();
                                             ch2m.show();
+                                            ch3m.show();
                                             math_logo.show();
                                             ch1s.show();
                                             ch2s.show();
+                                            ch3s.show();
                                             science_logo.show();
 
                                         })     

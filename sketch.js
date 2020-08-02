@@ -37,21 +37,25 @@ function setup() {
   ch1m.position(150,140);
   ch1m.size(180,90);
 
-  ch2m = createImg('assets/tape5.png');
+  ch2m = createImg('assets3/shapes.png');
   ch2m.position(400,140);
-  ch2m.size(180,90);
+  ch2m.size(190,93);
 
-  /*ch3m = createImg('assets/tape5.png');
-  ch3m.position(650,140);
-  ch3m.size(180,90);*/
+  ch3m = createImg('assets5/circlegeo.png');
+  ch3m.position(640,140);
+  ch3m.size(200,100);
 
   ch1s = createImg('assets2/energy.png');
   ch1s.position(150,310);
   ch1s.size(180,90);
 
-  ch2s = createImg('assets2/energy.png');
+  ch2s = createImg('assets4/universe.png');
   ch2s.position(400,310);
-  ch2s.size(180,90);
+  ch2s.size(185,97);
+
+  ch3s = createImg('assets6/matter.png');
+  ch3s.position(650,310);
+  ch3s.size(190,95);
 
   //Creating the (She want's to say something...) image
   introImg = createImg("assets/intro.png");
@@ -122,8 +126,8 @@ function setup() {
   form2 = new Form2();
   form3 = new Form3();
   form4 = new Form4();
-  //form5 = new Form5();
-  
+  form5 = new Form5();
+  form6 = new Form6();
 }
 
 
@@ -144,7 +148,8 @@ function draw() {
   form2.display();
   form3.display();
   form4.display();
-  //form5.display();
+  form5.display();
+  form6.display();
   drawSprites();
   
   muteBtn.mousePressed(function(){

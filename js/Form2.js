@@ -10,7 +10,7 @@ class Form2 {
        
         //Creating science logo image
         science_logo = createImg('assets2/scienceLogo.png');
-        science_logo.position(70,284);
+        science_logo.position(73,284);
 
         //Creating level element
         this.level2 = createElement('h2',"");
@@ -60,6 +60,7 @@ class Form2 {
             math_logo.hide();
             ch1s.hide();
             ch2s.hide();
+            ch3s.hide();
             science_logo.hide();
             introImg.hide();
             listen.hide();
@@ -239,7 +240,7 @@ class Form2 {
                     continueBtn.hide();
                     donut.visible = false;
                     solText.hide();
-                    solText.position(windowWidth-780,427);
+                    solText.position(windowWidth-800,427);
                     solution.remove();
 
                     //Stopping the donutVoice and recreating it with a different sound
@@ -250,7 +251,7 @@ class Form2 {
                     //Recreating sol
                     sol.remove();
                     sol = createImg('assets2/nucleusImg 1.png');
-                    sol.position(windowWidth-790,480);
+                    sol.position(windowWidth-810,480);
                     sol.hide();
 
                     //Recreating the destroyed player
@@ -304,7 +305,7 @@ class Form2 {
                         continueBtn.hide();
                         donut.visible = false;
                         solText.hide();
-                        solText.position(windowWidth-780,440);
+                        solText.position(windowWidth-800,440);
             
                         //Stopping the donutVoice and recreating it with a different sound
                         donutVoice.stop();
@@ -314,7 +315,7 @@ class Form2 {
                         //Creating removed solution
                         solution = createElement('h2','Geothermal energy is the heat from the earth. It’s clean and sustainable.');
                         
-                        solution.position(windowWidth-780,480);
+                        solution.position(windowWidth-800,480);
                         solution.hide();
 
                         //Recreating level element
@@ -461,7 +462,7 @@ class Form2 {
                                 continueBtn.hide();
                                 donut.visible = false;
                                 solText.hide();
-                                solText.position(windowWidth-780,440);
+                                solText.position(windowWidth-800,440);
                                 solution.remove();
                                 sol.remove();
 
@@ -481,7 +482,7 @@ class Form2 {
                                 sol.position(314,400);
                                 sol.hide();*/
                                 solution = createElement('h2',"Fossil fuels are fuels because they release heat energy when they are burned");
-                                solution.position(windowWidth-780,480);
+                                solution.position(windowWidth-800,480);
                                 solution.hide();
 
                                 //Recreating the destroyed player
@@ -639,9 +640,11 @@ class Form2 {
                                         //Showing the elements of home page
                                         ch1m.show();
                                         ch2m.show();
+                                        ch3m.show();
                                         math_logo.show();
                                         ch1s.show();
                                         ch2s.show();
+                                        ch3s.show();
                                         science_logo.show();
                                         solution.remove();
 
