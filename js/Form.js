@@ -54,13 +54,7 @@ class Form{
             science_logo.hide();
             introImg.hide();
             listen.hide();
-           
-            //Recreating the
-            /*donut.remove();
-            donut = createSprite(170,500,50,50);
-            donut.addAnimation("mrsDonut",donutAni);
-            donut.scale = 0.3;*/
-
+    
             //Positioning the invisible donut
             donut.x = 170;
             donut.visible = false;
@@ -70,7 +64,7 @@ class Form{
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
 
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -305,7 +299,6 @@ class Form{
                             //Recreating sol
                             sol.remove();
                             sol = createImg('assets/perimetersol3.png');
-                            //sol.size(500,220);
                             sol.position(windowWidth-840,430);
                             sol.hide();
 
@@ -381,11 +374,6 @@ class Form{
                                 donutVoice.remove();
                                 donutVoice = createAudio("assets/triSol1.mp3");
 
-                                //Recreating the level element
-                                /*this.level1.remove();
-                                this.level1 = createElement('h2',"Level : Medium");
-                                this.level1.position(20,0);*/
-                            
                                 //Recreating sol
                                 sol.remove();
                                 sol = createImg('assets/trisol.png');
@@ -523,8 +511,14 @@ class Form{
             
                                     //mousePressed activity of the continue button
                                     continueBtn.mousePressed(()=>{
-                                        //Hiding some elements
                                         continueBtn.remove();
+                                        continueBtn = createButton('View score');
+                                        continueBtn.position(windowWidth-350,610);
+                                        continueBtn.size(200,40);
+                                        continueBtn.style('background-color',"yellow");
+                                        continueBtn.hide();
+
+                                        //Hiding some elements
                                         donut.visible = false;
                                         solText.position(windowWidth-820,330);
                                         solText.hide();
@@ -534,11 +528,6 @@ class Form{
                                         donutVoice.remove();
                                         donutVoice = createAudio("assets/table.mp3");
 
-                                        //Recreating the level element
-                                        /*this.level1.remove();
-                                        this.level1 = createElement('h2',"Level : Hard");
-                                        this.level1.position(20,0);*/
-                                       
                                         //Recreating sol
                                         sol.remove();
                                         sol = createImg('assets/tableSol.png');
@@ -596,6 +585,75 @@ class Form{
                                         button_back.position(19, 550);
                                         button_back.hide();
 
+                                        continueBtn.mousePressed(()=>{
+                                            continueBtn.hide();
+
+                                            //Stopping the donutVoice and hiding elements
+                                            donutVoice.stop();
+                                            button_back.show();
+                                            this.level1.hide();
+                                            this.quesImgMath1.hide();
+                                            sol.hide();
+                                            solText.hide();
+                                            donut.visible = false;
+
+                                            //Destroying and removing elements
+                                            op1.destroy();
+                                            op2.destroy();
+                                            op3.destroy();
+                                            op4.destroy();
+
+                                            op1text.remove();
+                                            op2text.remove();
+                                            op3text.remove();
+                                            op4text.remove();
+                                            this.question1.remove();
+
+                                            //Positioning the sound buttons
+                                            muteBtn.position(10,10);
+                                            unmuteBtn.position(10,10);
+
+                                            if(score===0){
+                                                //Creating score text
+                                                scoreText = createImg("Score/0points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===1){
+                                                //Creating score text
+                                                scoreText = createImg("Score/1point.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===2){
+                                                //Creating score text
+                                                scoreText = createImg("Score/2points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===3){
+                                                //Creating score text
+                                                scoreText = createImg("Score/3points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===4){
+                                                //Creating score text
+                                                scoreText = createImg("Score/4points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===5){
+                                                //Creating score text
+                                                scoreText = createImg("Score/5points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===6){
+                                                //Creating score text
+                                                scoreText = createImg("Score/6points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===7){
+                                                //Creating score text
+                                                scoreText = createImg("Score/7points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                        })
                                         //mousePressed activities of back button
                                         button_back.mousePressed(()=>{
                                             //Resetting score
@@ -635,7 +693,8 @@ class Form{
                                             ch2s.show();
                                             ch3s.show();
                                             science_logo.show();
-
+                                            scoreText.hide();
+                                            continueBtn.hide();
                                         })     
                                     })
                                 })

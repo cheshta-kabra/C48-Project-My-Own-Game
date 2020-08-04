@@ -28,23 +28,16 @@ class Form6 {
         sol.position(550,400);
         sol.hide();
 
-        //
+        //Creating solution 
         solution = createElement('h2',"");
         solution.position(550,400);
         solution.hide();
 
-        
+        //Creating donut voice
         donutVoice = createAudio("assets/pen.mp3");
 
-        
-        /*introImg = createImg("assets/mrsDonut1.png");
-        introImg.position(570,400);
-        introImg.show();*/
-
+        //Creating help audio
         help = createAudio("assets/help1.mp3");
-
-
-        //listen = createButton('Listen');
     }
     display(){
         //mousePressed activity of the ch1 button
@@ -71,7 +64,7 @@ class Form6 {
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
         
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -83,10 +76,6 @@ class Form6 {
             this.question6 = createElement('h2',"1)What is the process of conversion of solid to liquid called?");
             this.question6.position(windowWidth-900,200);
 
-            //Displaying the question's 2nd line
-            /*this.question6line2 = createElement('h2',"sharpener turns?");
-            this.question6line2.position(windowWidth-660,233);*/
-           
             //Displaying the question image
             this.quesImgSci3 = createImg("assets6/ice.gif");
             this.quesImgSci3.position(windowWidth-670,60);
@@ -140,8 +129,6 @@ class Form6 {
 
             op4text = createElement('h3',"Watering");
             op4text.position(windowWidth-140,225);
-
-           
            
             //Recreating solution element
             solution.remove();
@@ -156,8 +143,6 @@ class Form6 {
             //mousePressed activity of the continue button
             continueBtn.mousePressed(()=>{
                 //Hiding some elements
-                //this.optextbSupport.hide();
-                //this.question6line2.hide();
                 continueBtn.hide();
                 donut.visible = false;
                 solText.hide();
@@ -172,7 +157,6 @@ class Form6 {
                 //Recreating sol
                 solution.remove();
                 solution = createElement('h2','A gas is a substance with no definite volume and no definite shape.');
-                //solution.size(300,300);
                 solution.position(windowWidth-900,480);
                 solution.hide();
 
@@ -181,13 +165,13 @@ class Form6 {
                 player.addAnimation("pl1",playerImg);
                 player.scale = 0.03;
 
-                //Recreating quesImgSci1
+                //Recreating quesImgSci3
                 this.quesImgSci3.remove();
                 this.quesImgSci3 = createImg("assets6/matter1.png");
                 this.quesImgSci3.position(windowWidth-700,73); 
                 this.quesImgSci3.size(230,140);
 
-                //Recreating question2
+                //Recreating question6
                 this.question6.remove();
                 this.question6 = createElement('h2',"2)Which of these has no definite volume");
                 this.question6.position(windowWidth-800,200);
@@ -256,13 +240,13 @@ class Form6 {
                     player.addAnimation("pl1",playerImg);
                     player.scale = 0.03;
             
-                    //Recreating quesImgSci1
+                    //Recreating quesImgSci3
                     this.quesImgSci3.remove();
                     this.quesImgSci3 = createImg("assets6/gas1.gif");
                     this.quesImgSci3.position(windowWidth-676,55);
                     this.quesImgSci3.size(140,160);
                     
-                    //Recreating question2
+                    //Recreating question6
                     this.question6.remove();
                     this.question6 = createElement('h2','3)What state of matter does this picture show?');
                     this.question6.position(windowWidth-840,200);
@@ -312,7 +296,6 @@ class Form6 {
         
                         //Creating removed solution
                         solution = createElement('h2','When water vapour gets cold, it turns to a liquid');
-                        //solution.size(600,270);
                         solution.position(windowWidth-900,480);
                         solution.hide();
 
@@ -323,22 +306,19 @@ class Form6 {
 
                         //Removing sol
                         sol.remove();
-                        /*sol = createImg('assets2/nucleusImg.png');
-                        sol.position(340,400);
-                        sol.hide();*/
 
                         //Recreating the destroyed player
                         player = createSprite(80,120,440,80);
                         player.addAnimation("pl1",playerImg);
                         player.scale = 0.03;
                 
-                        //Recreating quesImgSci1
+                        //Recreating quesImgSci3
                         this.quesImgSci3.remove();
                         this.quesImgSci3 = createImg("assets6/liquid.jpg");
                         this.quesImgSci3.position(windowWidth-740,93);
                         this.quesImgSci3.size(150,120);
                         
-                        //Recreating question2
+                        //Recreating question6
                         this.question6.remove();
                         this.question6 = createElement('h2',"4)When water vapour gets cold, it turns to a..");
                         this.question6.position(windowWidth-900,200);
@@ -389,20 +369,14 @@ class Form6 {
                             donut.visible = false;
                             solText.hide();
                             solText.position(windowWidth-760,440);
-                            solution.remove();
 
                             //Stopping the donutVoice and recreating it with a different sound
                             donutVoice.stop();
                             donutVoice.remove();
                             donutVoice = createAudio("assets6/air.mp3");
 
-                            //Recreating level element
-                           /* this.level6.remove();
-                            this.level6 = createElement('h2',"Level : Medium");
-                            this.level6.position(20,0);*/
-
-                            //Creating removed sol
-                            //sol.remove();
+                            //Recreating solution
+                            solution.remove();
                             solution = createElement('h2','Air is a mixture of gases');
                             solution.position(windowWidth-760,480);
                             solution.hide();
@@ -412,13 +386,13 @@ class Form6 {
                             player.addAnimation("pl1",playerImg);
                             player.scale = 0.03;
                     
-                            //Recreating quesImgSci1
+                            //Recreating quesImgSci3
                             this.quesImgSci3.remove();
                             this.quesImgSci3 = createImg("assets6/mixture1.png");
                             this.quesImgSci3.position(windowWidth-660,80);
                             this.quesImgSci3.size(140,140);
                             
-                            //Recreating question2
+                            //Recreating question6
                             this.question6.remove();
                             this.question6 = createElement('h2','5)Give an example of a mixture.');
                             this.question6.position(windowWidth-760,210);
@@ -428,14 +402,12 @@ class Form6 {
                             op2text.remove();
                             op3text.remove();
                             op4text.remove();
-                           
-
+                         
                             op1text = createElement('h3',"Salt");
                             op1text.position(windowWidth-140,75);
                             
                             op2text = createElement('h3',"Sugar");
                             op2text.position(windowWidth-140,377);
-                        
 
                             op3text = createElement('h3',"Air");
                             op3text.position(windowWidth-140,225);
@@ -474,11 +446,7 @@ class Form6 {
                                 this.level6 = createElement('h2',"Level : Hard");
                                 this.level6.position(20,0);
 
-                                //Creating removed sol
-                                sol.remove();
-                                /*sol = createImg('assets2/soundSol.png');
-                                sol.position(314,400);
-                                sol.hide();*/
+                                //Recreating solution
                                 solution = createElement('h2',"The boiling point of water is 100°C");
                                 solution.position(windowWidth-800,480);
                                 solution.hide();
@@ -488,13 +456,13 @@ class Form6 {
                                 player.addAnimation("pl1",playerImg);
                                 player.scale = 0.03;
                         
-                                //Recreating quesImgSci1
+                                //Recreating quesImgSci3
                                 this.quesImgSci3.remove();
                                 this.quesImgSci3 = createImg("assets6/boiling.gif");
                                 this.quesImgSci3.position(windowWidth-700,110);
                                 this.quesImgSci3.size(170,100);
                                 
-                                //Recreating question2
+                                //Recreating question6
                                 this.question6.remove();
                                 this.question6 = createElement('h2',"6)What is the boiling point of water?");
                                 this.question6.position(windowWidth-800,200);
@@ -505,7 +473,6 @@ class Form6 {
                                 op3text.remove();
                                 op4text.remove();
                                
-
                                 op1text = createElement('h3',"10°C");
                                 op1text.position(windowWidth-140,377);
 
@@ -518,7 +485,6 @@ class Form6 {
                                 op4text = createElement('h4',"30°C");
                                 op4text.position(windowWidth-140,75);
                                 
-
                                 //Resetting the option sprites and positioning them
                                 reset(op1);
                                 reset(op2);
@@ -532,8 +498,14 @@ class Form6 {
 
                                  //mousePressed activity of the continue button
                                  continueBtn.mousePressed(()=>{
-                                    //Hiding some elements
                                     continueBtn.remove();
+                                    continueBtn = createButton('View score');
+                                    continueBtn.position(windowWidth-350,610);
+                                    continueBtn.size(200,40);
+                                    continueBtn.style('background-color',"yellow");
+                                    continueBtn.hide();
+                                   
+                                    //Hiding some elements
                                     donut.visible = false;
                                     solution.remove();
                                     solText.position(windowWidth-840,440);
@@ -544,17 +516,11 @@ class Form6 {
                                     donutVoice.remove();
                                     donutVoice = createAudio("assets6/weight.mp3");
 
-                                    //Recreating the level element
-                                    /*this.level1.remove();
-                                    this.level1 = createElement('h2',"Level : Hard");
-                                    this.level1.position(20,0);*/
-                                   
                                     //Recreating sol
                                     solution = createElement('h2',"Weight is the measure of gravity on an object");
                                     solution.position(windowWidth-840,480);
                                     solution.hide();
                                    
-        
                                     //Recreating the destroyed player
                                     player = createSprite(80,120,440,80);
                                     player.addAnimation("pl1",playerImg);
@@ -566,7 +532,7 @@ class Form6 {
                                     this.quesImgSci3.position(windowWidth-700,110);
                                     this.quesImgSci3.size(200,100);
                                     
-                                    //Recreating question1
+                                    //Recreating question6
                                     this.question6.remove();
                                     this.question6 = createElement('h2',"7)What is the measure of gravity on an object?");
                                     this.question6.position(windowWidth-840,200);
@@ -605,6 +571,77 @@ class Form6 {
                                     button_back.position(19, 550);
                                     button_back.hide();
 
+                                    continueBtn.mousePressed(()=>{
+                                      continueBtn.hide(); 
+                                      
+                                      //Stopping the donutVoice and hiding elements
+                                      donutVoice.stop();
+                                      //button_back.hide();
+                                      this.level6.hide();
+                                      this.quesImgSci3.hide();
+                                      sol.hide();
+                                      solText.hide();
+                                      donut.visible = false;
+                                      solution.remove();
+
+                                      //Destroying and removing elements
+                                      op1.destroy();
+                                      op2.destroy();
+                                      op3.destroy();
+                                      op4.destroy();
+
+                                      op1text.remove();
+                                      op2text.remove();
+                                      op3text.remove();
+                                      op4text.remove();
+                                      this.question6.remove();  
+
+                                      //Positioning the sound buttons
+                                      muteBtn.position(10,10);
+                                      unmuteBtn.position(10,10);
+
+                                        if(score===0){
+                                            //Creating score text
+                                            scoreText = createImg("Score/0points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===1){
+                                            //Creating score text
+                                            scoreText = createImg("Score/1point.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===2){
+                                            //Creating score text
+                                            scoreText = createImg("Score/2points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===3){
+                                            //Creating score text
+                                            scoreText = createImg("Score/3points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===4){
+                                            //Creating score text
+                                            scoreText = createImg("Score/4points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===5){
+                                            //Creating score text
+                                            scoreText = createImg("Score/5points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===6){
+                                            //Creating score text
+                                            scoreText = createImg("Score/6points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===7){
+                                            //Creating score text
+                                            scoreText = createImg("Score/7points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+
+                                    })
                                     //mousePressed activities of back button
                                     button_back.mousePressed(()=>{
                                         //Resetting score
@@ -645,7 +682,8 @@ class Form6 {
                                         ch3s.show();
                                         science_logo.show();
                                         solution.remove();
-
+                                        scoreText.hide();
+                                        continueBtn.hide();
                                     })     
                                 })
                             });

@@ -32,23 +32,16 @@ class Form2 {
         sol.position(550,400);
         sol.hide();
 
-        //
+        //Creating solution element
         solution = createElement('h2',"");
         solution.position(550,400);
         solution.hide();
 
-        
+        //Creating donut voice
         donutVoice = createAudio("assets/pen.mp3");
 
-        
-        /*introImg = createImg("assets/mrsDonut1.png");
-        introImg.position(570,400);
-        introImg.show();*/
-
+        //Creating help audio
         help = createAudio("assets/help1.mp3");
-
-
-        //listen = createButton('Listen');
     }
     display(){
         //mousePressed activity of the ch1 button
@@ -69,13 +62,15 @@ class Form2 {
             donut.x = 170;
             donut.visible = false;
            
+            //Positioning the solText
             solText.position(windowWidth-900,440);
+            
             //Positioning sound buttons
             muteBtn.position(200,10);
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
         
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -144,8 +139,6 @@ class Form2 {
 
             op4text = createElement('h4',"Electrical");
             op4text.position(windowWidth-140,377);
-
-           
            
             //Recreating solution element
             solution.remove();
@@ -160,7 +153,6 @@ class Form2 {
             //mousePressed activity of the continue button
             continueBtn.mousePressed(()=>{
                 //Hiding some elements
-                //this.optextbSupport.hide();
                 this.question2line2.hide();
                 continueBtn.hide();
                 donut.visible = false;
@@ -175,7 +167,6 @@ class Form2 {
                 //Recreating sol
                 solution.remove();
                 solution = createElement('h2','A candle makes both heat and light');
-                
                 solution.position(windowWidth-750,480);
                 solution.hide();
 
@@ -314,7 +305,6 @@ class Form2 {
         
                         //Creating removed solution
                         solution = createElement('h2','Geothermal energy is the heat from the earth. It’s clean and sustainable.');
-                        
                         solution.position(windowWidth-800,480);
                         solution.hide();
 
@@ -325,10 +315,7 @@ class Form2 {
 
                         //Removing sol
                         sol.remove();
-                        /*sol = createImg('assets2/nucleusImg.png');
-                        sol.position(340,400);
-                        sol.hide();*/
-
+                      
                         //Recreating the destroyed player
                         player = createSprite(80,120,440,80);
                         player.addAnimation("pl1",playerImg);
@@ -360,7 +347,6 @@ class Form2 {
                         op3text = createElement('h4',"Geothermal");
                         op3text.position(windowWidth-140,377);
                        
-
                         op4text = createElement('h3',"Kinetic");
                         op4text.position(windowWidth-140,527);
 
@@ -384,6 +370,7 @@ class Form2 {
                         continueBtn.size(200,40);
                         continueBtn.style('background-color',"yellow");
                         continueBtn.hide();
+
                         //mousePressed activity of the continue button
                         continueBtn.mousePressed(()=>{
                             //Hiding some elements
@@ -398,13 +385,7 @@ class Form2 {
                             donutVoice.remove();
                             donutVoice = createAudio("assets2/sound.mp3");
 
-                            //Recreating level element
-                           /* this.level2.remove();
-                            this.level2 = createElement('h2',"Level : Medium");
-                            this.level2.position(20,0);*/
-
                             //Creating removed sol
-                            //sol.remove();
                             sol = createImg('assets2/soundSol.png');
                             sol.position(windowWidth-780,433);
                             sol.hide();
@@ -430,7 +411,6 @@ class Form2 {
                             op2text.remove();
                             op3text.remove();
                             op4text.remove();
-                           
 
                             op1text = createElement('h3',"Force");
                             op1text.position(windowWidth-140,75);
@@ -438,7 +418,6 @@ class Form2 {
                             op2text = createElement('h4',"Instruments");
                             op2text.position(windowWidth-140,377);
                         
-
                             op3text = createElement('h4',"Vibrations");
                             op3text.position(windowWidth-140,225);
 
@@ -463,7 +442,6 @@ class Form2 {
                                 donut.visible = false;
                                 solText.hide();
                                 solText.position(windowWidth-800,440);
-                                solution.remove();
                                 sol.remove();
 
                                 //Stopping the donutVoice and recreating it with a different sound
@@ -476,11 +454,8 @@ class Form2 {
                                 this.level2 = createElement('h2',"Level : Hard");
                                 this.level2.position(20,0);
 
-                                //Creating removed sol
-                                sol.remove();
-                                /*sol = createImg('assets2/soundSol.png');
-                                sol.position(314,400);
-                                sol.hide();*/
+                                //Recreating solution element
+                                solution.remove();
                                 solution = createElement('h2',"Fossil fuels are fuels because they release heat energy when they are burned");
                                 solution.position(windowWidth-800,480);
                                 solution.hide();
@@ -519,7 +494,6 @@ class Form2 {
 
                                 op4text = createElement('h4',"Pressurized");
                                 op4text.position(windowWidth-140,527);
-                                
 
                                 //Resetting the option sprites and positioning them
                                 reset(op1);
@@ -534,8 +508,14 @@ class Form2 {
 
                                  //mousePressed activity of the continue button
                                  continueBtn.mousePressed(()=>{
-                                    //Hiding some elements
                                     continueBtn.remove();
+                                    continueBtn = createButton('View score');
+                                    continueBtn.position(windowWidth-350,610);
+                                    continueBtn.size(200,40);
+                                    continueBtn.style('background-color',"yellow");
+                                    continueBtn.hide();
+
+                                    //Hiding some elements
                                     donut.visible = false;
                                     solution.remove();
                                     solText.position(windowWidth-900,440);
@@ -546,17 +526,11 @@ class Form2 {
                                     donutVoice.remove();
                                     donutVoice = createAudio("assets2/laptop.mp3");
 
-                                    //Recreating the level element
-                                    /*this.level1.remove();
-                                    this.level1 = createElement('h2',"Level : Hard");
-                                    this.level1.position(20,0);*/
-                                   
                                     //Recreating sol
                                     solution = createElement('h2',"The energy used by laptop and coffee pot are about the same");
                                     solution.position(windowWidth-900,480);
                                     solution.hide();
-                                   
-        
+                                
                                     //Recreating the destroyed player
                                     player = createSprite(80,120,440,80);
                                     player.addAnimation("pl1",playerImg);
@@ -568,7 +542,7 @@ class Form2 {
                                     this.quesImgSci1.position(windowWidth-770,60);
                                     this.quesImgSci1.size(450,170);
                                     
-                                    //Recreating question1
+                                    //Recreating question2
                                     this.question2.remove();
                                     this.question2 = createElement('h2',"7)What uses more energy? Six hours of laptop use or making coffee?");
                                     this.question2.position(windowWidth-900,200);
@@ -607,6 +581,76 @@ class Form2 {
                                     button_back.position(19, 550);
                                     button_back.hide();
 
+                                    continueBtn.mousePressed(()=>{
+                                        continueBtn.hide();
+
+                                        //Stopping the donutVoice and hiding elements
+                                        donutVoice.stop();
+                                        button_back.show();
+                                        this.level2.hide();
+                                        this.quesImgSci1.hide();
+                                        sol.hide();
+                                        solText.hide();
+                                        solution.hide();
+                                        donut.visible = false;
+
+                                        //Destroying and removing elements
+                                        op1.destroy();
+                                        op2.destroy();
+                                        op3.destroy();
+                                        op4.destroy();
+
+                                        op1text.remove();
+                                        op2text.remove();
+                                        op3text.remove();
+                                        op4text.remove();
+                                        this.question2.remove();
+
+                                        //Positioning the sound buttons
+                                        muteBtn.position(10,10);
+                                        unmuteBtn.position(10,10);
+
+                                        if(score===0){
+                                            //Creating score text
+                                            scoreText = createImg("Score/0points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===1){
+                                            //Creating score text
+                                            scoreText = createImg("Score/1point.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===2){
+                                            //Creating score text
+                                            scoreText = createImg("Score/2points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===3){
+                                            //Creating score text
+                                            scoreText = createImg("Score/3points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===4){
+                                            //Creating score text
+                                            scoreText = createImg("Score/4points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===5){
+                                            //Creating score text
+                                            scoreText = createImg("Score/5points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===6){
+                                            //Creating score text
+                                            scoreText = createImg("Score/6points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===7){
+                                            //Creating score text
+                                            scoreText = createImg("Score/7points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                    })
                                     //mousePressed activities of back button
                                     button_back.mousePressed(()=>{
                                         //Resetting score
@@ -647,7 +691,8 @@ class Form2 {
                                         ch3s.show();
                                         science_logo.show();
                                         solution.remove();
-
+                                        scoreText.hide();
+                                        continueBtn.hide();
                                     })     
                                 })
                             });

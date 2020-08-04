@@ -21,7 +21,6 @@ class Form5{
         //Creating (Here's the solution:) element 
         solText = createElement('h2',"Here's the solution:");
         solText.position(320,350);
-        //solText.style('color',"red");
         solText.hide();
 
         //Creating solution image
@@ -50,13 +49,8 @@ class Form5{
             science_logo.hide();
             introImg.hide();
             listen.hide();
-           
-            //Recreating the
-            /*donut.remove();
-            donut = createSprite(170,500,50,50);
-            donut.addAnimation("mrsDonut",donutAni);
-            donut.scale = 0.3;*/
-
+            sol.remove();
+       
             //Positioning the invisible donut
             donut.x = 170;
             donut.visible = false;
@@ -66,7 +60,7 @@ class Form5{
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
 
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -129,15 +123,13 @@ class Form5{
             //Displaying option's text on the option sprites
             op1text = createElement('h3',"1");
             op1text.position(windowWidth-140,225);
-            
-
+           
             op2text = createElement('h3',"2");
             op2text.position(windowWidth-140,377);
 
             op3text = createElement('h3',"0");
             op3text.position(windowWidth-140,75);
             
-
             op4text = createElement('h3',"3");
             op4text.position(windowWidth-140,527);
 
@@ -164,13 +156,6 @@ class Form5{
                     donutVoice.remove();
                     donutVoice = createAudio("assets5/360.mp3");
 
-                    //Recreating sol
-                    /*sol.remove();
-                    sol = createImg('assets3/polygon?.png');
-                    sol.size(660,260);
-                    sol.position(windowWidth-850,410);
-                    sol.hide();*/
-
                     //Displaying the solution image
                     solution.remove();
                     solution = createElement('h2',"1 degree is 1/360th part of a 360° circle");
@@ -183,13 +168,13 @@ class Form5{
                     player.scale = 0.03;
                     player.x = 0
 
-                    //Recreating quesImgMath2
+                    //Recreating quesImgMath3
                     this.quesImgMath3.remove();
                     this.quesImgMath3 = createImg("assets5/circle1.png");
                     this.quesImgMath3.position(windowWidth-700,70); 
                     this.quesImgMath3.size(170,150);
 
-                    //Recreating question3
+                    //Recreating question5
                     this.question5.remove();
                     this.question5 = createElement('h2',"2)One degree is _______ of a circle");
                     this.question5.position(windowWidth-800,200);
@@ -247,12 +232,6 @@ class Form5{
                         donutVoice.remove();
                         donutVoice = createAudio("assets5/45°.mp3");
 
-                        //Recreating sol
-                        /*sol.remove();
-                        sol = createImg('assets/sqsol.png');
-                        sol.position(windowWidth-710,420);
-                        sol.hide();*/
-
                         //Displaying the solution image
                         solution.remove();
                         solution = createElement('h2',"A full circle is 360°. 360/8 = 45. So a° = 45°");
@@ -264,13 +243,13 @@ class Form5{
                         player.addAnimation("pl1",playerImg);
                         player.scale = 0.03;
                 
-                        //Recreating quesImgMath2
+                        //Recreating quesImgMath3
                         this.quesImgMath3.remove();
                         this.quesImgMath3 = createImg("assets5/45circle.png");
                         this.quesImgMath3.position(windowWidth-680,68);
                         this.quesImgMath3.size(180,160);
                         
-                        //Recreating question3
+                        //Recreating question5
                         this.question5.remove();
                         this.question5 = createElement('h2',"3)How many degrees is each of the angles?");
                         this.question5.position(windowWidth-800,200);
@@ -323,13 +302,6 @@ class Form5{
                             this.level5 = createElement('h2',"Level : Medium");
                             this.level5.position(20,0);
            
-                            //Recreating sol
-                            /*sol.remove();
-                            sol = createImg('assets/perimetersol3.png');
-                            //sol.size(500,220);
-                            sol.position(windowWidth-840,430);
-                            sol.hide();*/
-
                             //Displaying the solution image
                             solution.remove();
                             solution = createElement('h2',"An acute angle is > 0° and < 90°");
@@ -341,18 +313,17 @@ class Form5{
                             player.addAnimation("pl1",playerImg);
                             player.scale = 0.03;
                             
-                            //Recreating quesImgMath2
+                            //Recreating quesImgMath3
                             this.quesImgMath3.remove();
                             this.quesImgMath3 = createImg("assets5/angle.png");
                             this.quesImgMath3.position(windowWidth-680,40);
                             this.quesImgMath3.size(200,200);
                     
-                            //Recreating question3
+                            //Recreating question5
                             this.question5.remove();
                             this.question5 = createElement('h2',"4)Angle ABC is 89 degrees. What type of angle is it?");
                             this.question5.position(windowWidth-850,210);
 
-                          
                             //Recreating all option's text
                             op1text.remove();
                             op2text.remove();
@@ -406,17 +377,6 @@ class Form5{
                                 donutVoice.remove();
                                 donutVoice = createAudio("assets5/radius.mp3");
 
-                                //Recreating the level element
-                                /*this.level5.remove();
-                                this.level5 = createElement('h2',"Level : Medium");
-                                this.level5.position(20,0);*/
-                            
-                                //Recreating sol
-                                /*sol.remove();
-                                sol = createImg('assets/solutionTri.png');
-                                sol.position(windowWidth-840,430);
-                                sol.hide();*/
-                                
                                 //Displaying the solution image
                                 solution.remove();
                                 solution = createElement('h2',"The circumference of a circle = π*diameter = 3.14*3 = 9.42 inches");
@@ -428,19 +388,17 @@ class Form5{
                                 player.addAnimation("pl1",playerImg);
                                 player.scale = 0.03;
                                
-                                //Recreating quesImgMath2
+                                //Recreating quesImgMath3
                                 this.quesImgMath3.remove();
                                 this.quesImgMath3 = createImg("assets5/3inch.png");
                                 this.quesImgMath3.position(windowWidth-678,60);
                                 this.quesImgMath3.size(180,150);
                                 
-                                //Recreating question3
+                                //Recreating question5
                                 this.question5.remove();
                                 this.question5 = createElement('h2',"5)What is the circumference of this circle?");
                                 this.question5.position(windowWidth-800,200);
     
-                               
-
                                 //Recreating all option's text
                                 op1text.remove();
                                 op2text.remove();
@@ -489,36 +447,27 @@ class Form5{
                                     this.level5 = createElement('h2',"Level : Hard");
                                     this.level5.position(20,0);
 
-                                    //Recreating sol
-                                    //sol.remove();
+                                    //Recreating solution
                                     solution = createElement('h2','Circumference = π*diameter = π. ∴ diameter=1 unit');
                                     solution.position(windowWidth-800,470);
                                     solution.hide();
-
-                                    //Displaying the solution image
-                                    /*solution.remove();
-                                    solution = createElement('h2',"The corners on a 3D shape are called vertices");
-                                    solution.position(windowWidth-780,480);
-                                    solution.hide();*/
 
                                     //Recreating the destroyed player
                                     player = createSprite(80,120,440,80);
                                     player.addAnimation("pl1",playerImg);
                                     player.scale = 0.03;
 
-                                    //Recreating quesImgMath2
+                                    //Recreating quesImgMath3
                                     this.quesImgMath3.remove();
                                     this.quesImgMath3 = createImg("assets5/πcircum.png");
                                     this.quesImgMath3.position(windowWidth-620,60);
                                     this.quesImgMath3.size(170,150);
 
-                                    //Recreating question3
+                                    //Recreating question5
                                     this.question5.remove();
                                     this.question5 = createElement('h2',"6)If a circle's circumference = π, what is its diameter?");
                                     this.question5.position(windowWidth-800,200);
                                     
-                                  
-                                   
                                     //Recreating all option's text
                                     op1text.remove();
                                     op2text.remove();
@@ -550,24 +499,24 @@ class Form5{
             
                                     //mousePressed activity of the continue button
                                     continueBtn.mousePressed(()=>{
-                                        //Hiding some elements
                                         continueBtn.remove();
+                                        continueBtn = createButton('View score');
+                                        continueBtn.position(windowWidth-350,610);
+                                        continueBtn.size(200,40);
+                                        continueBtn.style('background-color',"yellow");
+                                        continueBtn.hide();
+
+                                        //Hiding some elements
                                         donut.visible = false;
                                         solText.position(windowWidth-800,430);
                                         solText.hide();
-                                        solution.remove();
-
+                        
                                         //Stopping the donutVoice and recreating it with a different sound 
                                         donutVoice.stop();
                                         donutVoice.remove();
                                         donutVoice = createAudio("assets5/4pi.mp3");
-
-                                        //Recreating the level element
-                                        /*this.level5.remove();
-                                        this.level5 = createElement('h2',"Level : Hard");
-                                        this.level5.position(20,0);*/
-                                       
-                                        //Recreating sol
+   
+                                        //Recreating solution
                                         solution.remove();
                                         solution = createElement('h2','Area = πr² = π(2)² = 4π cm²');
                                         solution.size(200,200);
@@ -579,13 +528,13 @@ class Form5{
                                         player.addAnimation("pl1",playerImg);
                                         player.scale = 0.03;
 
-                                        //Recreating quesImgMath2
+                                        //Recreating quesImgMath3
                                         this.quesImgMath3.remove();
                                         this.quesImgMath3 = createImg("assets5/area.png");
                                         this.quesImgMath3.position(windowWidth-660,30);
                                         this.quesImgMath3.size(220,200);
                                         
-                                        //Recreating question3
+                                        //Recreating question5
                                         this.question5.remove();
                                         this.question5 = createElement('h2',"7)What is the area of a circle whose radius is 2cm?");
                                         this.question5.position(windowWidth-800,200);
@@ -624,6 +573,76 @@ class Form5{
                                         button_back.position(19, 550);
                                         button_back.hide();
 
+                                        continueBtn.mousePressed(()=>{
+                                            continueBtn.hide();
+
+                                            //Stopping the donutVoice and hiding elements
+                                            donutVoice.stop();
+                                            button_back.show();
+                                            this.level5.hide();
+                                            this.quesImgMath3.hide();
+                                            solution.hide();
+                                            solText.hide();
+                                            donut.visible = false;
+
+                                            //Destroying and removing elements
+                                            op1.destroy();
+                                            op2.destroy();
+                                            op3.destroy();
+                                            op4.destroy();
+
+                                            op1text.remove();
+                                            op2text.remove();
+                                            op3text.remove();
+                                            op4text.remove();
+                                            this.question5.remove();
+
+                                            //Positioning the sound buttons
+                                            muteBtn.position(10,10);
+                                            unmuteBtn.position(10,10);
+
+                                            if(score===0){
+                                                //Creating score text
+                                                scoreText = createImg("Score/0points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===1){
+                                                //Creating score text
+                                                scoreText = createImg("Score/1point.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===2){
+                                                //Creating score text
+                                                scoreText = createImg("Score/2points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===3){
+                                                //Creating score text
+                                                scoreText = createImg("Score/3points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===4){
+                                                //Creating score text
+                                                scoreText = createImg("Score/4points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===5){
+                                                //Creating score text
+                                                scoreText = createImg("Score/5points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===6){
+                                                //Creating score text
+                                                scoreText = createImg("Score/6points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===7){
+                                                //Creating score text
+                                                scoreText = createImg("Score/7points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+        
+                                        })
                                         //mousePressed activities of back button
                                         button_back.mousePressed(()=>{
                                             //Resetting score
@@ -663,7 +682,8 @@ class Form5{
                                             ch2s.show();
                                             ch3s.show();
                                             science_logo.show();
-
+                                            scoreText.hide();
+                                            continueBtn.hide();
                                         })     
                                     })
                                 })

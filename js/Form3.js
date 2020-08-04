@@ -21,7 +21,6 @@ class Form3{
         //Creating (Here's the solution:) element 
         solText = createElement('h2',"Here's the solution:");
         solText.position(320,350);
-        //solText.style('color',"red");
         solText.hide();
 
         //Creating solution image
@@ -50,13 +49,8 @@ class Form3{
             science_logo.hide();
             introImg.hide();
             listen.hide();
-           
-            //Recreating the
-            /*donut.remove();
-            donut = createSprite(170,500,50,50);
-            donut.addAnimation("mrsDonut",donutAni);
-            donut.scale = 0.3;*/
-
+            sol.remove();
+        
             //Positioning the invisible donut
             donut.x = 170;
             donut.visible = false;
@@ -66,7 +60,7 @@ class Form3{
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
 
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -162,13 +156,6 @@ class Form3{
                     donutVoice.remove();
                     donutVoice = createAudio("assets3/polygon.mp3");
 
-                    //Recreating sol
-                    /*sol.remove();
-                    sol = createImg('assets3/polygon?.png');
-                    sol.size(660,260);
-                    sol.position(windowWidth-850,410);
-                    sol.hide();*/
-
                     //Displaying the solution image
                     solution.remove();
                     solution = createElement('h2',"Polygon is a simple closed figure formed by line segments");
@@ -245,12 +232,6 @@ class Form3{
                         donutVoice.remove();
                         donutVoice = createAudio("assets3/edges.mp3");
 
-                        //Recreating sol
-                        /*sol.remove();
-                        sol = createImg('assets/sqsol.png');
-                        sol.position(windowWidth-710,420);
-                        sol.hide();*/
-
                         //Displaying the solution image
                         solution.remove();
                         solution = createElement('h2',"An edge is where two faces meet");
@@ -320,13 +301,6 @@ class Form3{
                             this.level3.remove();
                             this.level3 = createElement('h2',"Level : Medium");
                             this.level3.position(20,0);
-           
-                            //Recreating sol
-                            /*sol.remove();
-                            sol = createImg('assets/perimetersol3.png');
-                            //sol.size(500,220);
-                            sol.position(windowWidth-840,430);
-                            sol.hide();*/
 
                             //Displaying the solution image
                             solution.remove();
@@ -350,7 +324,6 @@ class Form3{
                             this.question3 = createElement('h2',"4)How many faces does a triangular prism have?");
                             this.question3.position(windowWidth-850,210);
 
-                          
                             //Recreating all option's text
                             op1text.remove();
                             op2text.remove();
@@ -404,17 +377,6 @@ class Form3{
                                 donutVoice.remove();
                                 donutVoice = createAudio("assets3/vertices.mp3");
 
-                                //Recreating the level element
-                                /*this.level3.remove();
-                                this.level3 = createElement('h2',"Level : Medium");
-                                this.level3.position(20,0);*/
-                            
-                                //Recreating sol
-                                /*sol.remove();
-                                sol = createImg('assets/solutionTri.png');
-                                sol.position(windowWidth-840,430);
-                                sol.hide();*/
-                                
                                 //Displaying the solution image
                                 solution.remove();
                                 solution = createElement('h2',"The corners on a 3D shape are called vertices");
@@ -436,8 +398,6 @@ class Form3{
                                 this.question3.remove();
                                 this.question3 = createElement('h2',"5)The corners on a 3D shape are called");
                                 this.question3.position(windowWidth-800,200);
-    
-                               
 
                                 //Recreating all option's text
                                 op1text.remove();
@@ -487,17 +447,10 @@ class Form3{
                                     this.level3 = createElement('h2',"Level : Hard");
                                     this.level3.position(20,0);
 
-                                    //Recreating sol
-                                    //sol.remove();
+                                    //Creating sol
                                     sol = createImg('assets3/10sol.png');
                                     sol.position(windowWidth-830,420);
                                     sol.hide();
-
-                                    //Displaying the solution image
-                                    /*solution.remove();
-                                    solution = createElement('h2',"The corners on a 3D shape are called vertices");
-                                    solution.position(windowWidth-780,480);
-                                    solution.hide();*/
 
                                     //Recreating the destroyed player
                                     player = createSprite(80,120,440,80);
@@ -514,9 +467,7 @@ class Form3{
                                     this.question3.remove();
                                     this.question3 = createElement('h2',"6)How many cubes are there in the given figure");
                                     this.question3.position(windowWidth-800,200);
-                                    
-                                  
-                                   
+                               
                                     //Recreating all option's text
                                     op1text.remove();
                                     op2text.remove();
@@ -548,8 +499,14 @@ class Form3{
             
                                     //mousePressed activity of the continue button
                                     continueBtn.mousePressed(()=>{
-                                        //Hiding some elements
                                         continueBtn.remove();
+                                        continueBtn = createButton('View score');
+                                        continueBtn.position(windowWidth-350,610);
+                                        continueBtn.size(200,40);
+                                        continueBtn.style('background-color',"yellow");
+                                        continueBtn.hide();
+
+                                        //Hiding some elements
                                         donut.visible = false;
                                         solText.position(windowWidth-780,430);
                                         solText.hide();
@@ -560,11 +517,6 @@ class Form3{
                                         donutVoice.remove();
                                         donutVoice = createAudio("assets3/net.mp3");
 
-                                        //Recreating the level element
-                                        /*this.level3.remove();
-                                        this.level3 = createElement('h2',"Level : Hard");
-                                        this.level3.position(20,0);*/
-                                       
                                         //Recreating sol
                                         sol.remove();
                                         sol = createImg('assets3/cubenet.gif');
@@ -622,6 +574,75 @@ class Form3{
                                         button_back.position(19, 550);
                                         button_back.hide();
 
+                                        continueBtn.mousePressed(()=>{
+                                            continueBtn.hide();
+
+                                            //Stopping the donutVoice and hiding elements
+                                            donutVoice.stop();
+                                            button_back.show();
+                                            this.level3.hide();
+                                            this.quesImgMath2.hide();
+                                            sol.hide();
+                                            solText.hide();
+                                            donut.visible = false;
+
+                                            //Destroying and removing elements
+                                            op1.destroy();
+                                            op2.destroy();
+                                            op3.destroy();
+                                            op4.destroy();
+
+                                            op1text.remove();
+                                            op2text.remove();
+                                            op3text.remove();
+                                            op4text.remove();
+                                            this.question3.remove();
+
+                                            //Positioning the sound buttons
+                                            muteBtn.position(10,10);
+                                            unmuteBtn.position(10,10);
+
+                                            if(score===0){
+                                                //Creating score text
+                                                scoreText = createImg("Score/0points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===1){
+                                                //Creating score text
+                                                scoreText = createImg("Score/1point.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===2){
+                                                //Creating score text
+                                                scoreText = createImg("Score/2points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===3){
+                                                //Creating score text
+                                                scoreText = createImg("Score/3points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===4){
+                                                //Creating score text
+                                                scoreText = createImg("Score/4points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===5){
+                                                //Creating score text
+                                                scoreText = createImg("Score/5points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===6){
+                                                //Creating score text
+                                                scoreText = createImg("Score/6points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                            else if(score===7){
+                                                //Creating score text
+                                                scoreText = createImg("Score/7points.gif");
+                                                scoreText.position(windowWidth-900,windowHeight/2);  
+                                            }
+                                        })
                                         //mousePressed activities of back button
                                         button_back.mousePressed(()=>{
                                             //Resetting score
@@ -661,7 +682,8 @@ class Form3{
                                             ch2s.show();
                                             ch3s.show();
                                             science_logo.show();
-
+                                            scoreText.hide();
+                                            continueBtn.hide();
                                         })     
                                     })
                                 })

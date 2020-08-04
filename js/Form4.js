@@ -28,23 +28,16 @@ class Form4 {
         sol.position(550,400);
         sol.hide();
 
-        //
+        //Creating solution element
         solution = createElement('h2',"");
         solution.position(550,400);
         solution.hide();
 
-        
+        //Creating donut voice        
         donutVoice = createAudio("assets/pen.mp3");
 
-        
-        /*introImg = createImg("assets/mrsDonut1.png");
-        introImg.position(570,400);
-        introImg.show();*/
-
+        //Creating help audio
         help = createAudio("assets/help1.mp3");
-
-
-        //listen = createButton('Listen');
     }
     display(){
         //mousePressed activity of the ch1 button
@@ -71,7 +64,7 @@ class Form4 {
             unmuteBtn.position(200,10);
 
             //Playing the help sound
-            help.volume(0.5);
+            help.volume(1);
             help.play();
         
             /*Displaying the level element (NOTE: show function is not used here as there 
@@ -83,10 +76,6 @@ class Form4 {
             this.question4 = createElement('h2',"1)What is the correct term for this grouping of stars, gas, and dust?");
             this.question4.position(windowWidth-900,200);
 
-            //Displaying the question's 2nd line
-            /*this.question4line2 = createElement('h2',"sharpener turns?");
-            this.question4line2.position(windowWidth-660,233);*/
-           
             //Displaying the question image
             this.quesImgSci2 = createImg("assets4/galaxy1.png");
             this.quesImgSci2.position(windowWidth-640,90);
@@ -141,8 +130,6 @@ class Form4 {
             op4text = createElement('h3',"Universe");
             op4text.position(windowWidth-140,377);
 
-           
-           
             //Recreating solution element
             solution.remove();
             solution = createElement('h2','A galaxy is a large group of stars, gas, and dust');
@@ -181,13 +168,13 @@ class Form4 {
                 player.addAnimation("pl1",playerImg);
                 player.scale = 0.03;
 
-                //Recreating quesImgSci1
+                //Recreating quesImgSci2
                 this.quesImgSci2.remove();
                 this.quesImgSci2 = createImg("assets4/solar1.jpg");
                 this.quesImgSci2.position(windowWidth-750,73); 
                 this.quesImgSci2.size(190,140);
 
-                //Recreating question2
+                //Recreating question4
                 this.question4.remove();
                 this.question4 = createElement('h2',"2)Which term best describes the image shown?");
                 this.question4.position(windowWidth-900,200);
@@ -256,13 +243,13 @@ class Form4 {
                     player.addAnimation("pl1",playerImg);
                     player.scale = 0.03;
             
-                    //Recreating quesImgSci1
+                    //Recreating quesImgSci2
                     this.quesImgSci2.remove();
                     this.quesImgSci2 = createImg("assets4/mars.png");
                     this.quesImgSci2.position(windowWidth-650,70);
                     this.quesImgSci2.size(140,140);
                     
-                    //Recreating question2
+                    //Recreating question4
                     this.question4.remove();
                     this.question4 = createElement('h2','3)What is this "Red Planet" that is 4th from the sun?');
                     this.question4.position(windowWidth-840,200);
@@ -323,22 +310,19 @@ class Form4 {
 
                         //Removing sol
                         sol.remove();
-                        /*sol = createImg('assets2/nucleusImg.png');
-                        sol.position(340,400);
-                        sol.hide();*/
-
+                    
                         //Recreating the destroyed player
                         player = createSprite(80,120,440,80);
                         player.addAnimation("pl1",playerImg);
                         player.scale = 0.03;
                 
-                        //Recreating quesImgSci1
+                        //Recreating quesImgSci2
                         this.quesImgSci2.remove();
                         this.quesImgSci2 = createImg("assets4/Earth.png");
                         this.quesImgSci2.position(windowWidth-690,93);
                         this.quesImgSci2.size(120,120);
                         
-                        //Recreating question2
+                        //Recreating question4
                         this.question4.remove();
                         this.question4 = createElement('h2',"4)Earth is the only planet in our solar system that has");
                         this.question4.position(windowWidth-900,200);
@@ -389,20 +373,15 @@ class Form4 {
                             donut.visible = false;
                             solText.hide();
                             solText.position(windowWidth-840,400);
-                            solution.remove();
+                            
 
                             //Stopping the donutVoice and recreating it with a different sound
                             donutVoice.stop();
                             donutVoice.remove();
                             donutVoice = createAudio("assets4/geo.mp3");
 
-                            //Recreating level element
-                           /* this.level4.remove();
-                            this.level4 = createElement('h2',"Level : Medium");
-                            this.level4.position(20,0);*/
-
-                            //Creating removed sol
-                            //sol.remove();
+                            //Recreating solution
+                            solution.remove();
                             solution = createElement('h2','"Geo" in the word geosphere refers to land.');
                             solution.position(windowWidth-843,440);
                             solution.hide();
@@ -412,13 +391,13 @@ class Form4 {
                             player.addAnimation("pl1",playerImg);
                             player.scale = 0.03;
                     
-                            //Recreating quesImgSci1
+                            //Recreating quesImgSci2
                             this.quesImgSci2.remove();
                             this.quesImgSci2 = createImg("assets4/geosphere.png");
                             this.quesImgSci2.position(windowWidth-660,70);
                             this.quesImgSci2.size(140,140);
                             
-                            //Recreating question2
+                            //Recreating question4
                             this.question4.remove();
                             this.question4 = createElement('h2','5)The prefix "geo" in the word geosphere refers to');
                             this.question4.position(windowWidth-840,210);
@@ -428,15 +407,13 @@ class Form4 {
                             op2text.remove();
                             op3text.remove();
                             op4text.remove();
-                           
-
+          
                             op1text = createElement('h3',"Space");
                             op1text.position(windowWidth-140,75);
                             
                             op2text = createElement('h3',"Air");
                             op2text.position(windowWidth-140,225);
                         
-
                             op3text = createElement('h3',"Land");
                             op3text.position(windowWidth-140,377);
 
@@ -474,11 +451,7 @@ class Form4 {
                                 this.level4 = createElement('h2',"Level : Hard");
                                 this.level4.position(20,0);
 
-                                //Creating removed sol
-                                sol.remove();
-                                /*sol = createImg('assets2/soundSol.png');
-                                sol.position(314,400);
-                                sol.hide();*/
+                                //Recreating solution
                                 solution = createElement('h2',"Saturn is larger than Uranus");
                                 solution.position(windowWidth-800,480);
                                 solution.hide();
@@ -488,13 +461,13 @@ class Form4 {
                                 player.addAnimation("pl1",playerImg);
                                 player.scale = 0.03;
                         
-                                //Recreating quesImgSci1
+                                //Recreating quesImgSci2
                                 this.quesImgSci2.remove();
                                 this.quesImgSci2 = createImg("assets4/Uranus.png");
                                 this.quesImgSci2.position(windowWidth-590,60);
                                 this.quesImgSci2.size(140,140);
                                 
-                                //Recreating question2
+                                //Recreating question4
                                 this.question4.remove();
                                 this.question4 = createElement('h2',"6)Which of the following planets is larger than Uranus?");
                                 this.question4.position(windowWidth-800,200);
@@ -505,7 +478,6 @@ class Form4 {
                                 op3text.remove();
                                 op4text.remove();
                                
-
                                 op1text = createElement('h3',"Earth");
                                 op1text.position(windowWidth-140,377);
 
@@ -518,7 +490,6 @@ class Form4 {
                                 op4text = createElement('h4',"Mars");
                                 op4text.position(windowWidth-140,527);
                                 
-
                                 //Resetting the option sprites and positioning them
                                 reset(op1);
                                 reset(op2);
@@ -532,8 +503,13 @@ class Form4 {
 
                                  //mousePressed activity of the continue button
                                  continueBtn.mousePressed(()=>{
-                                    //Hiding some elements
                                     continueBtn.remove();
+                                    continueBtn = createButton('View score');
+                                    continueBtn.position(windowWidth-350,610);
+                                    continueBtn.size(200,40);
+                                    continueBtn.style('background-color',"yellow");
+                                    continueBtn.hide();
+
                                     donut.visible = false;
                                     solution.remove();
                                     solText.position(windowWidth-840,440);
@@ -544,17 +520,11 @@ class Form4 {
                                     donutVoice.remove();
                                     donutVoice = createAudio("assets4/Hydrogen.mp3");
 
-                                    //Recreating the level element
-                                    /*this.level1.remove();
-                                    this.level1 = createElement('h2',"Level : Hard");
-                                    this.level1.position(20,0);*/
-                                   
                                     //Recreating sol
                                     solution = createElement('h2',"Hydrogen gas is the most abundant in space");
                                     solution.position(windowWidth-840,480);
                                     solution.hide();
-                                   
-        
+                   
                                     //Recreating the destroyed player
                                     player = createSprite(80,120,440,80);
                                     player.addAnimation("pl1",playerImg);
@@ -566,7 +536,7 @@ class Form4 {
                                     this.quesImgSci2.position(windowWidth-620,87);
                                     this.quesImgSci2.size(120,120);
                                     
-                                    //Recreating question1
+                                    //Recreating question4
                                     this.question4.remove();
                                     this.question4 = createElement('h2',"7)Which of the following gas is most abundant in space?");
                                     this.question4.position(windowWidth-840,200);
@@ -605,6 +575,76 @@ class Form4 {
                                     button_back.position(19, 550);
                                     button_back.hide();
 
+                                    continueBtn.mousePressed(()=>{
+                                        continueBtn.hide();
+
+                                        //Stopping the donutVoice and hiding elements
+                                        donutVoice.stop();
+                                        button_back.show();
+                                        this.level4.hide();
+                                        this.quesImgSci2.hide();
+                                        sol.hide();
+                                        solText.hide();
+                                        donut.visible = false;
+
+                                        //Destroying and removing elements
+                                        op1.destroy();
+                                        op2.destroy();
+                                        op3.destroy();
+                                        op4.destroy();
+
+                                        op1text.remove();
+                                        op2text.remove();
+                                        op3text.remove();
+                                        op4text.remove();
+                                        this.question4.remove();
+                                        solution.remove();
+
+                                        //Positioning the sound buttons
+                                        muteBtn.position(10,10);
+                                        unmuteBtn.position(10,10);
+
+                                        if(score===0){
+                                            //Creating score text
+                                            scoreText = createImg("Score/0points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===1){
+                                            //Creating score text
+                                            scoreText = createImg("Score/1point.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===2){
+                                            //Creating score text
+                                            scoreText = createImg("Score/2points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===3){
+                                            //Creating score text
+                                            scoreText = createImg("Score/3points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===4){
+                                            //Creating score text
+                                            scoreText = createImg("Score/4points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===5){
+                                            //Creating score text
+                                            scoreText = createImg("Score/5points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===6){
+                                            //Creating score text
+                                            scoreText = createImg("Score/6points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                        else if(score===7){
+                                            //Creating score text
+                                            scoreText = createImg("Score/7points.gif");
+                                            scoreText.position(windowWidth-900,windowHeight/2);  
+                                        }
+                                    })
                                     //mousePressed activities of back button
                                     button_back.mousePressed(()=>{
                                         //Resetting score
@@ -645,7 +685,8 @@ class Form4 {
                                         ch3s.show();
                                         science_logo.show();
                                         solution.remove();
-
+                                        continueBtn.hide();
+                                        scoreText.hide();
                                     })     
                                 })
                             });
