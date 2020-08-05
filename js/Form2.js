@@ -47,6 +47,7 @@ class Form2 {
         //mousePressed activity of the ch1 button
         ch1s.mousePressed(()=>{
             //Hiding some elements
+            name1.hide();
             ch1m.hide();
             ch2m.hide();
             ch3m.hide();
@@ -693,6 +694,7 @@ class Form2 {
                                         solution.remove();
                                         scoreText.hide();
                                         continueBtn.hide();
+                                        name1.show();
                                     })     
                                 })
                             });

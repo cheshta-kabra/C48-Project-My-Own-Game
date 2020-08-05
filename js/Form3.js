@@ -33,12 +33,10 @@ class Form3{
     }
 
     display(){
-        //Giving background color
-        background("#D3D3D3");
-
         //mousePressed activity of the ch1 button
         ch2m.mousePressed(()=>{
             //Hiding some elements
+            name1.hide();
             ch1m.hide();
             ch2m.hide();
             ch3m.hide();
@@ -459,7 +457,7 @@ class Form3{
 
                                     //Recreating quesImgMath2
                                     this.quesImgMath2.remove();
-                                    this.quesImgMath2 = createImg("assets3/10cubes.png");
+                                    this.quesImgMath2 = createImg("assets3/10cubes-1.png");
                                     this.quesImgMath2.position(windowWidth-637,75);
                                     this.quesImgMath2.size(170,150);
 
@@ -684,6 +682,7 @@ class Form3{
                                             science_logo.show();
                                             scoreText.hide();
                                             continueBtn.hide();
+                                            name1.show();
                                         })     
                                     })
                                 })

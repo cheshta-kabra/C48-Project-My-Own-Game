@@ -21,6 +21,7 @@ var solution;
 var op1text,op2text,op3text,op4text;
 var scoreText;
 var correct,wrong;
+var name1;
 function preload(){
   playerImg = loadAnimation("assets/p1.png","assets/p2.png","assets/p3.png");
   donutAni = loadAnimation("Gif/aa0.png","Gif/aa1.png","Gif/aa2.png","Gif/aa3.png","Gif/aa4.png","Gif/aa5.png","Gif/aa6.png","Gif/aa7.png","Gif/aa8.png","Gif/aa7.png","Gif/aa6.png","Gif/aa5.png","Gif/aa4.png","Gif/aa3.png","Gif/aa2.png","Gif/aa1.png","Gif/aa0.png");
@@ -123,6 +124,10 @@ function setup() {
   correct = createAudio("assets/correct.mp3");
   wrong = createAudio("assets/wrong3.mp3");
 
+  name1 = createImg("assets/logo.gif");
+  name1.position(windowWidth/2-30,20);
+  name1.size(260,60);
+
   //Creating 6 forms for 6 chapters
   form = new Form();
   form2 = new Form2();
@@ -135,7 +140,7 @@ function setup() {
 
 function draw() {
  
-  background("#F9ED69");
+  background("#D3D3D3");
    //Positioning and mousePressed activities of the listen button
    listen.position(windowWidth-360,windowHeight-160);
    listen.size(100,30);

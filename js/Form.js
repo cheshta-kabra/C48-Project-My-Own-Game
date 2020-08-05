@@ -38,12 +38,10 @@ class Form{
     }
 
     display(){
-        //Giving background color
-        background("#D3D3D3");
-
         //mousePressed activity of the ch1 button
         ch1m.mousePressed(()=>{
             //Hiding some elements
+            name1.hide();
             ch1m.hide();
             ch2m.hide();
             ch3m.hide();
@@ -695,6 +693,7 @@ class Form{
                                             science_logo.show();
                                             scoreText.hide();
                                             continueBtn.hide();
+                                            name1.show();
                                         })     
                                     })
                                 })

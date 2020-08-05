@@ -43,6 +43,7 @@ class Form4 {
         //mousePressed activity of the ch1 button
         ch2s.mousePressed(()=>{
             //Hiding some elements
+            name1.hide();
             ch1m.hide();
             ch2m.hide();
             ch3m.hide();
@@ -487,7 +488,7 @@ class Form4 {
                                 op3text = createElement('h3',"Saturn");
                                 op3text.position(windowWidth-140,75);
 
-                                op4text = createElement('h4',"Mars");
+                                op4text = createElement('h3',"Mars");
                                 op4text.position(windowWidth-140,527);
                                 
                                 //Resetting the option sprites and positioning them
@@ -687,6 +688,7 @@ class Form4 {
                                         solution.remove();
                                         continueBtn.hide();
                                         scoreText.hide();
+                                        name1.show();
                                     })     
                                 })
                             });
